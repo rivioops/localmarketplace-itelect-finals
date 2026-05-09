@@ -40,7 +40,7 @@ services:
     plan: free
     rootDir: client
     buildCommand: npm ci && npm run build
-    startCommand: npm run start:render
+    startCommand: npm start
     envVars:
       - key: NODE_VERSION
         value: 22.12.0
