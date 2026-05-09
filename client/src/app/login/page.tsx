@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 import { AuthCard } from '../../components/AuthCard';
 import { StatusAlert } from '../../components/StatusAlert';
 import { useAuth } from '../../contexts/AuthContext';
