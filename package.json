@@ -37,6 +37,6 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/tailwindcss": "^3.0.11",
-    "mongodb": "^7.1.0"
+    "mongodb": "^7.2.0"
   }
 }
