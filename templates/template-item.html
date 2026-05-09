@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #655a56;
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem;
+        }
+
+        .container {
+            max-width: 120rem;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 9px;
+            box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+            padding: 4rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-gap: 4rem;
+            align-items: start;
+        }
+
+        .product__hero {
+            position: relative;
+            height: 35rem;
+            background: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9px;
+        }
+
+        .product__emoji {
+            font-size: 15rem;
+            line-height: 1;
+        }
+
+        .product__title {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .product__detail-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .product__detail-label {
+            font-weight: 700;
+            margin-right: 1rem;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            color: #999;
+            letter-spacing: 1px;
+        }
+
+        .product__detail-value {
+            font-size: 1.7rem;
+            color: #555;
+        }
+
+        .price-box {
+            background-color: #55c57a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 9px;
+            margin-top: 4rem;
+        }
+
+        .price-value {
+            font-size: 5rem;
+            font-weight: 300;
+            display: block;
+        }
+
+        .price-label {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .sidebar-box {
+            background-color: #f0f0f0;
+            padding: 2rem;
+            border-radius: 9px;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            font-size: 1.6rem;
+            color: #55c57a;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <title>{%NAME%} | Local Marketplace</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <a href="/overview" class="back-link">&larr; Back to Overview</a>
+
+        <div class="product">
+            <div class="product__hero">
+                <span class="product__emoji">{%IMAGE%}</span>
+            </div>
+
+            <div class="product__info">
+                <h1 class="product__title">{%NAME%}</h1>
+
+                <div class="product__detail-box">
+                    <span class="product__detail-label">Location</span>
+                    <span class="product__detail-value">{%LOCATION%}</span>
+                </div>
+
+                <div class="product__detail-box">
+                    <span class="product__detail-label">Seller</span>
+                    <span class="product__detail-value">{%SELLER%}</span>
+                </div>
+
+                <div class="sidebar-box">
+                    <p class="product__description">{%DESCRIPTION%}</p>
+                </div>
+
+                <div class="price-box">
+                    <span class="price-value">₱{%PRICE%}</span>
+                    <span class="price-label">Best Price!</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

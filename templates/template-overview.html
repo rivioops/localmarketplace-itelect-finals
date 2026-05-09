@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,700,900" rel="stylesheet">
+
+    <title>Local Marketplace</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #459495, #32714f);
+            color: #333;
+      
+            padding: 3rem 1.5rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-family: 'Megrim', sans-serif;
+            font-size: 4.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.2rem;
+            text-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+
+  
+        .container {
+            width: 100%;
+            max-width: 50rem; 
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            padding: 3rem 2rem;
+            box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.25);
+        }
+
+      
+        .cards-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 3.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            width: 100%; 
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card:active {
+            transform: scale(0.98);
+        }
+
+        .card__emoji {
+            font-size: 8rem;
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card__title-box {
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            padding: 1.2rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .card__heading {
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .card__details {
+            padding: 2rem;
+            font-size: 1.7rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card__detail {
+            font-weight: 700;
+
+        }
+
+        .card__link {
+            margin: 0 auto 2.5rem;
+            padding: 1.2rem 5rem;
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            color: #fff;
+            border-radius: 5rem;
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-decoration: none;
+            text-align: center;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>Local Marketplace</h1>
+    </section>
+
+    <div class="container">
+        <div class="cards-container">
+            {%ITEM_CARDS%}
+        </div>
+    </div>
+
+</body>
+</html>

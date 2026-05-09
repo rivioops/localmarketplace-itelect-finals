@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "AirPods Max",
+        "image": "🎧",
+        "from": "Reg",
+        "price": "32,990.00",
+        "location": "Malvar",
+        "description": "The ultimate over-ear listening experience",
+        "seller": "Theo J"
+    },
+    {
+        "id": 1,
+        "name": "iPhone 17 Pro",
+        "image": "📱",
+        "from": "Regi",
+        "price": "79,990.50",
+        "location": "Lipa",
+        "description": "Innovative design for ultimate performance and battery life.",
+        "seller": "Theo G"
+    },
+    {
+        "id": 2,
+        "name": "MacBook Air 13",
+        "image": "💻",
+        "from": "Regina",
+        "price": "72,990.00",
+        "location": "Batangas",
+        "description": "Thin. Fast. Powerful and portable.",
+        "seller": "Theo"
+    }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Apple iPhone 15 Pro Max 256GB",
+    "price": 84990,
+    "category": "Smartphone",
+    "description": "Titanium design with the powerful A17 Pro chip.",
+    "postedDate": "2024-01-10",
+    "premiumProducts": true
+  },
+  {
+    "name": "MacBook Air 13-inch (M3, 8GB RAM, 256GB SSD)",
+    "price": 69990,
+    "category": "Laptop",
+    "description": "M3 chip powered for ultra-portability and speed.",
+    "postedDate": "2024-03-15",
+    "premiumProducts": false
+  },
+  {
+    "name": "iPad Pro 11-inch (M4, 256GB WiFi)",
+    "price": 65990,
+    "category": "Tablet",
+    "description": "Thin design featuring Ultra Retina XDR display.",
+    "postedDate": "2024-05-20",
+    "premiumProducts": true
+  },
+  {
+    "name": "AirPods Pro (2nd generation)",
+    "price": 14990,
+    "category": "Audio",
+    "description": "ANC, Adaptive Audio, and USB-C MagSafe case.",
+    "postedDate": "2023-11-20",
+    "premiumProducts": true,
+    "priceDiscount": 12990
+  },
+  {
+    "name": "Apple Watch Series 9 (Aluminum, 41mm)",
+    "price": 26990,
+    "category": "Wearable",
+    "description": "Features S9 chip, Double Tap, and bright display.",
+    "postedDate": "2024-01-22",
+    "premiumProducts": false
+  },
+  {
+    "name": "Mac mini (M2, 8GB RAM, 256GB SSD)",
+    "price": 36990,
+    "category": "Desktop",
+    "description": "Powerful and compact desktop with the M2 chip.",
+    "postedDate": "2023-10-18",
+    "premiumProducts": false
+  },
+  {
+    "name": "Apple Pencil Pro",
+    "price": 8690,
+    "category": "Accessories",
+    "description": "Squeeze, barrel roll, and haptic feedback.",
+    "postedDate": "2024-05-21",
+    "premiumProducts": true
+  },
+  {
+    "name": "Apple iPhone 13 128GB",
+    "price": 38990,
+    "category": "Smartphone",
+    "description": "A15 Bionic chip and robust dual-camera system.",
+    "postedDate": "2023-09-12",
+    "premiumProducts": false,
+    "priceDiscount": 34990
+  },
+  {
+    "name": "AirTag (1 Pack)",
+    "price": 1890,
+    "category": "Accessories",
+    "description": "Track keys, wallet, and more in the Find My app.",
+    "postedDate": "2023-11-30",
+    "premiumProducts": false
+  },
+  {
+    "name": "Magic Keyboard for iPad Pro 11-inch",
+    "price": 19990,
+    "category": "Accessories",
+    "description": "Floating design, built-in trackpad, backlit keys.",
+    "postedDate": "2024-02-10",
+    "premiumProducts": true
+  }
+]
