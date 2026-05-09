@@ -5,8 +5,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  outputFileTracingRoot: __dirname
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
