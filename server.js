@@ -1,51 +1,51 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-// Handle Uncaught Exceptions (Must be at the very top)
-process.on('uncaughtException', err => {
-  console.log('UNCAUGHT EXCEPTION! 💥 Shutting down...');
+// Handle Uncaught Exceptions
+process.on("uncaughtException", (err) => {
+  console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");
   console.log(err.name, err.message);
   process.exit(1);
 });
 
+// Load local env file
 dotenv.config({ path: "./config.env" });
 
 const app = require("./app");
 
-if (!process.env.DATABASE) {
-  throw new Error("DATABASE environment variable is required.");
+// Use MONGO_URI from Render Environment Variables
+const mongoURI = process.env.MONGO_URI || process.env.DATABASE;
+
+if (!mongoURI) {
+  throw new Error(
+    "MongoDB connection string is missing. Please add MONGO_URI in Render Environment Variables."
+  );
 }
 
-if (process.env.DATABASE.includes("<db_password>") && !process.env.DATABASE_PASSWORD) {
-  throw new Error("DATABASE_PASSWORD environment variable is required when DATABASE contains <db_password>.");
-}
-
-const DB = process.env.DATABASE.replace(
-  "<db_password>",
-  process.env.DATABASE_PASSWORD || "",
-);
 mongoose
-  .connect(DB)
+  .connect(mongoURI)
   .then(() => {
     console.log("DB connected successfully!");
   })
-  .catch(err => {
+  .catch((err) => {
     console.log("DATABASE CONNECTION FAILED! Shutting down...");
     console.log(err.name, err.message);
     process.exit(1);
   });
 
+// Render automatically provides process.env.PORT
 const port = process.env.PORT || 3000;
-const host = process.env.HOST || "0.0.0.0";
+const host = "0.0.0.0";
 
 const server = app.listen(port, host, () => {
   console.log(`App running on ${host}:${port}...`);
   console.log(`Environment: ${process.env.NODE_ENV}`);
 });
 
-process.on('unhandledRejection', err => {
-  console.log('UNHANDLED REJECTION! 💥 Shutting down...');
+process.on("unhandledRejection", (err) => {
+  console.log("UNHANDLED REJECTION! 💥 Shutting down...");
   console.log(err.name, err.message);
+
   server.close(() => {
     process.exit(1);
   });
