@@ -1,8 +1,8 @@
 services:
   - type: web
     name: regina-express-local-marketplace-api
-    runtime: node
-    region: sing
+    env: node
+    region: singapore
     plan: free
     buildCommand: npm install
     startCommand: npm start
@@ -35,8 +35,8 @@ services:
 
   - type: web
     name: regina-express-local-marketplace-web
-    runtime: node
-    region: sing
+    env: node
+    region: singapore
     plan: free
     rootDir: client
     buildCommand: npm ci && npm run build
