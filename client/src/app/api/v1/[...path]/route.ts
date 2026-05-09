@@ -1,6 +1,11 @@
+const env = ((globalThis as any).process?.env || {}) as {
+  API_BASE_URL?: string;
+  API_INTERNAL_HOSTPORT?: string;
+};
+
 const API_BASE_URL =
-  process.env.API_BASE_URL?.replace(/\/$/, '') ||
-  (process.env.API_INTERNAL_HOSTPORT ? `http://${process.env.API_INTERNAL_HOSTPORT}` : 'http://localhost:3000');
+  env.API_BASE_URL?.replace(/\/$/, '') ||
+  (env.API_INTERNAL_HOSTPORT ? `http://${env.API_INTERNAL_HOSTPORT}` : 'http://localhost:3000');
 
 const hopByHopHeaders = new Set([
   'connection',

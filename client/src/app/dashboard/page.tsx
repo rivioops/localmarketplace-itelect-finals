@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { AppShell } from '../../components/AppShell';
 import { PageHeader } from '../../components/PageHeader';
@@ -37,10 +36,10 @@ export default function DashboardPage() {
       <PageHeader
         title="Marketplace Dashboard"
         action={
-          <Link href="/products/new" className="btn btn-primary">
+          <a href="/products/new" className="btn btn-primary">
             <i className="ri-add-circle-line ri text-lg" aria-hidden="true" />
             Create Product
-          </Link>
+          </a>
         }
       />
 
@@ -67,9 +66,9 @@ export default function DashboardPage() {
       <section className="mb-6">
         <div className="mb-3 flex items-center justify-between gap-3">
           <h2 className="text-xl font-black">Top Cheapest Products</h2>
-          <Link href="/stats" className="btn btn-ghost btn-sm">
+          <a href="/stats" className="btn btn-ghost btn-sm">
             View Stats
-          </Link>
+          </a>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {topProducts.map(product => (
